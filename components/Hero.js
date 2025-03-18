@@ -11,11 +11,7 @@ const sliderImages = [
 ];
 
 // Sample course options (you can expand this)
-const courseOptions = [
-  'Manual Software Testing',
-  'Data Science',
-  'AI & ML',
-];
+const courseOptions = ['Manual Software Testing', 'Data Science', 'AI & ML'];
 
 // Sample language options
 const languageOptions = ['English', 'Hindi', 'Other'];
@@ -35,7 +31,9 @@ export default function Hero() {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
   };
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + sliderImages.length) % sliderImages.length
+    );
   };
 
   // Form handling
@@ -56,7 +54,8 @@ export default function Hero() {
         {/* Left Column: Heading, Text, and Slider */}
         <div className="lg:w-1/2 flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fade-in">
-            Shaping Minds, <span className="text-[#ff8c00]">For Limitless Opportunities</span>
+            Shaping Minds,{' '}
+            <span className="text-[#ff8c00]">For Limitless Opportunities</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-2xl">
             Cinute Digital Pvt. Ltd. is a leading educational institution
@@ -117,7 +116,10 @@ export default function Hero() {
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Name
                 </label>
                 <input
@@ -134,7 +136,10 @@ export default function Hero() {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Email
                 </label>
                 <input
@@ -151,7 +156,10 @@ export default function Hero() {
 
               {/* Phone Number */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Phone Number
                 </label>
                 <div className="flex items-center mt-1">
@@ -173,7 +181,10 @@ export default function Hero() {
 
               {/* Course Selection */}
               <div>
-                <label htmlFor="course" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="course"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Select Course
                 </label>
                 <select
@@ -193,7 +204,10 @@ export default function Hero() {
 
               {/* Language Selection */}
               <div>
-                <label htmlFor="language" className="block text-sm font-medium text-gray-700">
+                <label
+                  htmlFor="language"
+                  className="block text-sm font-medium text-gray-700"
+                >
                   Select Preferred Language
                 </label>
                 <select
